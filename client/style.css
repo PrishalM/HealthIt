@@ -45,6 +45,19 @@ body {
   display: none;
 }
 
+footer {
+  padding: 20px;
+  background-color: var(--darkest-green);
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+footer,
+footer a {
+  color: var(--white);
+}
+
 /*******************************************************************************/
 /* Home page  */
 
