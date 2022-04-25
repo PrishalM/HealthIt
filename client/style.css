@@ -45,13 +45,6 @@ body {
   max-width: 500px;
 }
 
-form {
-  position: relative;
-  bottom: 250px;
-  max-width: 420px;
-  margin-left: 400px;
-}
-
 .float-container {
   margin: auto;
   padding-top: 100px;
