@@ -1,0 +1,42 @@
+services:
+  client:
+    container_name: healthit_dev_client
+    build: ./client
+    image: healthit_client
+    ports: 
+      - 8080:8080
+    working_dir: /code
+    volumes:
+      - type: bind
+        source: ./client
+        target: /code
+    command: [ "http-server" ]
+  api:
+    container_name: healthit_dev_api
+    ports: 
+      - 3000:3000
+    environment: 
+      - PGUSER=healthit_tracker
+      - PGHOST=db
+      - PGPASSWORD=healthitpass
+      - PGDATABASE=healthit
+      - PGPORT=5432
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: bash -c "npm install && npm run seedDev && npm run dev"
+
+  db:
+    container_name: healthit_dev_db
+    volumes:
+      - "dbdata:/var/lib/postgresql/data"
+    environment: 
+      - POSTGRES_DB=healthit
+      - POSTGRES_USER=healthit_tracker
+      - POSTGRES_PASSWORD=healthitpass
+volumes:
+  dbdata:
+networks: 
+  default:
+    name: healthit_api
+    
