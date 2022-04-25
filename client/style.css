@@ -1,16 +1,6 @@
-/* Note for Doreen  */
-/* Hi Doreen,    */
-/* You can delete this after but here is what I have changed in this file:  */
-/* 1. Updated the colour names to more descriptive names and amended this for each style  */
-/* 2. You can't add a background color for the body element as it will then be the same for all pages. So I have removed it from the body element and have added a class to the body and added the color there */
-/* 3. Adjusted the names of the styles so they are more descriptive */
-/* 4. Added a class called hide for the show/hide col */
-
-/*******************************************************************************/
-/* Generic  */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
 :root {
   --darkest-green: #1c471d;
@@ -70,6 +60,12 @@ footer a {
   padding-bottom: 15vh;
   display: flex;
 }
+
+/* margin: auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  width: 75%; */
 
 .intro-col {
   background-color: var(--green-yellow);
