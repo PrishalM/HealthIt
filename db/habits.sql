@@ -7,3 +7,4 @@ CREATE TABLE habits (
     frequency int NOT NULL,
     frequency_count int,
 );
+
