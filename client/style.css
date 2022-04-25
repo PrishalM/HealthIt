@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+:root {
+  --dark-color: #4e944f;
+  --med-color: #83bd75;
+  --light-color: #e9efc0;
+  --white-color: #ffffff;
+  --text-color: #1c471d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--med-color);
+}
+
+.nvbar {
+  background-color: var(--text-color);
+  position: sticky;
+}
+
+.nvbar a {
+  color: var(--white-color);
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+}
+
+.nvbar a:hover {
+  color: var(--white-color);
+}
+
+.container-one {
+  background-color: var(--light-color);
+  margin: 50px auto;
+  margin-top: 150px;
+  height: 500px;
+  max-width: 500px;
+}
+
+.container-two {
+  background-color: var(--white-color);
+  margin: 50px auto;
+  margin-top: 150px;
+  height: 500px;
+  max-width: 500px;
+}
+
+form {
+  position: relative;
+  bottom: 250px;
+  max-width: 420px;
+  margin-left: 400px;
+}
+
+.float-container {
+  margin: auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  width: 130vh;
+}
+
+.float-child {
+  background-color: var(--light-color);
+  height: 400px;
+  padding: 20px;
+}
+
+.float-child-two {
+  background-color: var(--white-color);
+  height: 400px;
+  padding: 20px;
+}
