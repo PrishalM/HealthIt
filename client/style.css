@@ -1,66 +1,92 @@
+/* Note for Doreen  */
+/* Hi Doreen,    */
+/* You can delete this after but here is what I have changed in this file:  */
+/* 1. Updated the colour names to more descriptive names and amended this for each style  */
+/* 2. You can't add a background color for the body element as it will then be the same for all pages. So I have removed it from the body element and have added a class to the body and added the color there */
+/* 3. Adjusted the names of the styles so they are more descriptive */
+/* 4. Added a class called hide for the show/hide col */
+
+/*******************************************************************************/
+/* Generic  */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 
 :root {
-  --dark-color: #4e944f;
-  --med-color: #83bd75;
-  --light-color: #e9efc0;
-  --white-color: #ffffff;
-  --text-color: #1c471d;
+  --darkest-green: #1c471d;
+  --green: #4e944f;
+  --light-green: #83bd75;
+  --green-yellow: #e9efc0;
+  --white: #ffffff;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--med-color);
 }
 
-.nvbar {
-  background-color: var(--text-color);
+.navbar {
+  background-color: var(--darkest-green);
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
-.nvbar a {
-  color: var(--white-color);
+.navbar h1 {
+  color: var(--white);
   font-family: "Playfair Display", serif;
-  font-size: 4vw;
+  font-size: 64px;
 }
 
-.nvbar a:hover {
-  color: var(--white-color);
+.navbar h1:hover {
+  color: var(--green);
 }
 
-.container-one {
-  background-color: var(--light-color);
-  margin: 50px auto;
-  margin-top: 150px;
-  height: 500px;
-  max-width: 500px;
+.hide {
+  display: none;
 }
 
-.container-two {
-  background-color: var(--white-color);
-  margin: 50px auto;
-  margin-top: 150px;
-  height: 500px;
-  max-width: 500px;
+/*******************************************************************************/
+/* Home page  */
+
+.homepage-body {
+  background-color: var(--light-green);
 }
 
-.float-container {
-  margin: auto;
-  padding-top: 100px;
+.center-container {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   display: flex;
-  flex-direction: row;
-  width: 130vh;
 }
 
-.float-child {
-  background-color: var(--light-color);
+.intro-col {
+  background-color: var(--green-yellow);
   height: 400px;
   padding: 20px;
 }
 
-.float-child-two {
-  background-color: var(--white-color);
+.sign-in-col {
+  background-color: var(--white);
   height: 400px;
   padding: 20px;
 }
+
+.create-account-col {
+  background-color: var(--white);
+  height: 400px;
+  padding: 20px;
+}
+
+input,
+label,
+button {
+  display: block;
+}
+
+/*******************************************************************************/
+/* Dashboard page  */
+
+/*******************************************************************************/
+/* Create habit page  */
+
+/*******************************************************************************/
+/* Edit habit page   */
