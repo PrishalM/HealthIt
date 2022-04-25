@@ -1,9 +1,9 @@
-const Habit = require('../models/Habit');
+const Habit = require('../models/habits');
 
 // index route: gets all habits
 async function index (req, res) {
     try {
-        const habits = await Habit.all
+        const habits = await habits.all
         res.status(200).json(habits)
     } catch(err) {
         res.status(500).json({err})
@@ -13,7 +13,7 @@ async function index (req, res) {
 // show route: gets habit by habit id
 async function showHabitbyHabitId (req, res) {
     try {
-        const habit = await Habit.findByHabitId(req.params.id);
+        const habit = await habit.findByHabitId(req.params.id);
         res.status(200).json(habit)
     } catch(err) {
         res.status(404).json({err})
