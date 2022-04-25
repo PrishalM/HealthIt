@@ -127,7 +127,7 @@ button {
   margin-top: -20px;
   margin-bottom: -20px;
   padding: 5px;
-  width: 360px;
+  width: 100%;
 }
 
 .form-container p {
