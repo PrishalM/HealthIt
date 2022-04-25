@@ -13,3 +13,18 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--med-color);
 }
+
+.nvbar {
+  background-color: var(--text-color);
+  position: sticky;
+}
+
+.nvbar a {
+  color: var(--white-color);
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+}
+
+.nvbar a:hover {
+  color: var(--white-color);
+}
