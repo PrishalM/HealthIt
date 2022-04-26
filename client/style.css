@@ -1,8 +1,14 @@
+/*******************************************************************************/
+/* Fonts  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
+/*******************************************************************************/
+/* Icons  */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+/*******************************************************************************/
+/* Generic  */
 :root {
   --darkest-green: #1c471d;
   --green: #4e944f;
@@ -37,6 +43,75 @@ body {
   display: none;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--darkest-green);
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--darkest-green);
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--darkest-green);
+}
+
+label {
+  color: var(--darkest-green);
+  font-size: 15px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.btn-primary {
+  background-color: var(--darkest-green);
+  color: var(--white);
+  border: 1px solid var(--darkest-green);
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 700;
+  height: 45px;
+  margin: 10px 0px 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--darkest-green);
+  border: 1px solid var(--darkest-green);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--darkest-green);
+  border: 1px solid var(--darkest-green);
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 700;
+  height: 45px;
+  margin: 10px 0px 10px;
+  text-align: center;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--darkest-green);
+  color: var(--white);
+  border: 1px solid var(--darkest-green);
+}
+
+input {
+  background-color: var(--green-yellow);
+  border: 1px solid var(--green);
+  font-size: 15px;
+  height: 45px;
+}
+
 footer {
   padding: 20px;
   background-color: var(--darkest-green);
@@ -63,16 +138,10 @@ footer a {
   display: flex;
 }
 
-.intro-col {
-  background-color: var(--green-yellow);
-  height: 400px;
-  padding: 20px;
-}
-
-.sign-in-col {
-  background-color: var(--white);
-  height: 400px;
-  padding: 20px;
+input,
+label,
+button {
+  display: block;
 }
 
 .create-account-col {
@@ -81,17 +150,12 @@ footer a {
   padding: 20px;
 }
 
-input,
-label,
-button {
-  display: block;
-}
+/***** Intro col *****/
 
-/***** DESCRIPTION *****/
-
-.intro-col h2 {
-  color: var(--darkest-green);
-  font-weight: 700;
+.intro-col {
+  background-color: var(--green-yellow);
+  height: 400px;
+  padding: 20px;
 }
 
 .intro-col p {
@@ -99,73 +163,200 @@ button {
   font-size: 23px;
 }
 
-/***** SIGN IN FORM *****/
-
-.form-container {
+/***** Sign in col *****/
+.sign-in-col {
+  background-color: var(--white);
+  height: 400px;
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
 
-h2 {
-  font-family: "Inter", sans-serif;
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-label {
-  color: var(--darkest-green);
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-}
-
-.form-container input {
-  background-color: var(--green-yellow);
-  border: 1px solid var(--green);
-  font-size: 15px;
-  height: 45px;
-  margin-top: -25px;
-  margin-bottom: -15px;
+.sign-in-col input {
   width: 100%;
 }
 
-.form-container p {
+.sign-in-col p {
   font-size: 15px;
   text-align: center;
+  color: var(--darkest-green);
   margin: 10px;
 }
 
-.submit-btn {
-  background-color: var(--darkest-green);
-  border: none;
-  border-radius: 25px;
-  color: var(--white);
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  height: 45px;
-  margin: 10px 0px 10px;
-  width: 100%;
-  text-align: center;
-}
-
-.form-container a {
+.sign-in-col a {
   text-decoration: none;
+  color: var(--darkest-green);
 }
 
 /*******************************************************************************/
 /* Dashboard page  */
 
+.bashboard-body {
+  background-color: var(--green-yellow);
+}
+
+.dashboard-container {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: grid;
+  margin: 20px;
+}
+
+.user-image {
+  background-color: var(--light-green);
+  border-radius: 25px;
+}
+
+#welcome {
+  color: var(--green);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#dashboard-name {
+  color: var(--darkest-green);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.settingsBtn {
+  background-color: var(--light-green);
+  color: var(--darkest-green);
+  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settingsBtn:hover {
+  background-color: var(--darkest-green);
+  color: var(--light-green);
+}
+
+.settingsBtn i {
+  font-size: 1.25rem;
+}
+
+.habit-button-row {
+  display: flex;
+  justify-content: center;
+}
+
+#CHbutton {
+  width: 360px;
+}
+
+#habit-output {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.habit {
+  background-color: var(--white);
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: grid;
+  padding: 20px;
+  margin: 20px;
+}
+
+.habit-progress-section {
+  display: flex;
+
+  align-self: center;
+}
+
+.habit-progress-container {
+  width: 50%;
+  height: 22.5px;
+  position: relative;
+  background-color: var(--green);
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 25px;
+}
+
+.habit-progressbar {
+  background-color: var(--darkest-green);
+  color: var(--white);
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bi-three-dots {
+  color: var(--darkest-green);
+  font-size: 1.25rem;
+}
+
+.bi-three-dots:hover {
+  color: var(--green);
+}
+
+.habit-goal {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.edit-link,
+.edit-link a {
+  color: var(--darkest-green);
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: end;
+}
+
+.habit-input-log {
+  display: flex;
+  align-items: center;
+}
+
+#HabitUnitInput {
+  width: 120px;
+}
+
+@media screen and (max-width: 1400px) {
+  .btn {
+    padding: 0;
+  }
+  .btn-outline-primary {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #HabitUnitInput {
+    width: 100%;
+  }
+  .btn-outline-primary {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #habit-output {
+    display: flex;
+  }
+}
+
 /*******************************************************************************/
 /* Create habit page  */
-
-/* .input-group {
-  background-color: var(--green-yellow);
-  border: 1px solid var(--green);
-  font-size: 15px;
-  height: 45px;
-  margin-top: -25px;
-  margin-bottom: -15px;
-  width: 100%;
-} */
 
 /*******************************************************************************/
 /* Edit habit page   */
