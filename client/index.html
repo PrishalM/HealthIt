@@ -22,7 +22,7 @@
         </a>
     </nav>
     <!-- Homepage section  -->
-    <div class="container-md p-0">
+    <main class="container-md p-0">
         <div class="center-container">
             <!-- Intro Column -->
             <div class="intro-col col-6">
@@ -37,19 +37,17 @@
             </div>
 
             <!-- Sign in Column -->
-            <div class="sign-in-col col-6">
-                <div class="form-container">
-                    <form>
-                        <h2>Sign In</h2>
-                        <label for="email">Email</label><br>
-                        <input name="email" type="text" class="form-input" /><br>
-                        <label for="password">Password</label><br>
-                        <input name="password" type="password" class="form-input" /><br>
-                        <button type="button" class="submit-btn">Submit</button>
-                        <p><a href="">Forgot your password</a>?</p>
-                        <p>Don't have an account? <a href="#">Create account now</a>!</p>
-                    </form>
-                </div>
+            <div class="sign-in-col col-6 form-container">
+                <form>
+                    <h2>Sign In</h2>
+                    <label for="email">Email</label><br>
+                    <input name="email" type="text" /><br>
+                    <label for="password">Password</label><br>
+                    <input name="password" type="password" /><br>
+                    <button type="button" class="submit-btn">Submit</button>
+                    <p><a href="">Forgot your password</a>?</p>
+                    <p>Don't have an account? <a href="#">Create account now</a>!</p>
+                </form>
             </div>
 
             <!-- Create account Column -->
@@ -57,15 +55,15 @@
                 <div class="p-3">
                     <form>
                         <h2>Create Account</h2>
-                        <label for="CAname">Name</label>
-                        <input id="CAname" type="text" />
-                        <label for="CAemail">Email</label>
-                        <input id="CAemail" type="email" />
-                        <label for="CApassword">Password</label>
-                        <input id="CApassword" type="password" />
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <label for="CAname">Name</label><br>
+                        <input id="CAname" type="text" /><br>
+                        <label for="CAemail">Email</label><br>
+                        <input id="CAemail" type="email" /><br>
+                        <label for="CApassword">Password</label><br>
+                        <input id="CApassword" type="password" /><br>
+                        <button type="button" class="submit-btn">Submit</button>
                     </form>
-                    <p>Already have an account?<a href="#">Sign in</a></p>
+                    <p>Already have an account? <a href="#">Sign in</a></p>
                 </div>
 
             </div>
@@ -80,6 +78,7 @@
                 </p>
             </div>
         </footer>
+    </main>
 </body>
 
 </html>
