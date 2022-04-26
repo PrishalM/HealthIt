@@ -26,7 +26,6 @@
         <div class="center-container">
             <!-- Container for Create Section -->
             <div class="container-fluid">
-
                 <!-- Top Row  -->
                 <div class="row">
                     <div class="col-sm-11 p-3" style="background-color:white;">
@@ -42,30 +41,32 @@
 
                 <!-- Middle Row -->
                 <div class="row">
-                    <div class="col-sm-12" style="color: #fff; background-color: #000">
-                        <h2>Create Habit</h2>
-                        <p>
-                            Select your healthy habit you would like to track
-                        </p>
+                    <div class="col-sm-2" style="background-color: rgb(255, 255, 255)"></div>
+                    <div class="col-sm-8 p-5" style="background-color: rgb(255, 255, 255)">
+                        <button type="button" class="btn btn-success" id="sleep">Sleep</button>
+                        <button type="button" class="btn btn-success" id="exercise">Exercise</button>
+                        <button type="button" class="btn btn-success" id="water">Water</button>
                     </div>
+                    <div class="col-sm-2" style="background-color: rgb(255, 255, 255)"></div>
                 </div>
 
                 <!-- Bottom Row -->
                 <div class="row">
-                    <div class="col-sm-3" style="background-color: rgb(255, 255, 136);"></div>
+                    <div class="col-sm-3" style="background-color: rgb(255, 255, 255);"></div>
                     <div class="col-sm-6 p-3" style="background-color: rgb(255, 255, 255);">
                         <!-- Frequency Per Day-->
                         <label for="email">Frequency per day</label>
-                        <div class="input-group mb-3 p-3">
-                            <input type="text" class="form-control" aria-describedby="basic-addon2">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="measurement" aria-label="measurement"
+                                aria-describedby="basic-addon2">
                             <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">unit</span>
                             </div>
                         </div>
-
                         <!-- Submit Button -->
                         <button type="button" class="submit-btn">Submit</button>
                     </div>
-                    <div class="col-sm-3" style="background-color: rgb(255, 255, 136);"></div>
+                    <div class="col-sm-3" style="background-color: rgb(255, 255, 255);"></div>
                 </div>
 
 

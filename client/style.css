@@ -157,7 +157,7 @@ label {
 /*******************************************************************************/
 /* Create habit page  */
 
-/* .input-group {
+.input-group {
   background-color: var(--green-yellow);
   border: 1px solid var(--green);
   font-size: 15px;
@@ -165,7 +165,13 @@ label {
   margin-top: -25px;
   margin-bottom: -15px;
   width: 100%;
-} */
+}
+
+.container-fluid {
+  width: 75%;
+  border: 6px solid #ffffff;
+  border-radius: 20px;
+}
 
 /*******************************************************************************/
 /* Edit habit page   */
