@@ -393,7 +393,7 @@ h2 {
 .edit-habit {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 }
 
 .btn-success .border {
@@ -402,4 +402,8 @@ h2 {
 
 .hide {
   display: none;
+}
+
+.editHabit {
+  margin-top: 40px;
 }
