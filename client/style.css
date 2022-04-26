@@ -366,9 +366,10 @@ h2 {
 
 .container-fluid {
   background-color: rgb(255, 255, 255);
-  width: 90%;
+  width: 70%;
   border: 6px solid #ffffff;
   border-radius: 20px;
+  height: 600px;
 }
 
 .btn-success {
@@ -393,7 +394,7 @@ h2 {
 .edit-habit {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .btn-success .border {
