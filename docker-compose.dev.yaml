@@ -1,9 +1,9 @@
 services:
   client:
-    container_name: healthit_dev_client
+    container_name: debug_dev_client
     build: ./client
-    image: healthit_client
-    ports:
+    image: debug_client
+    ports: 
       - 8080:8080
     working_dir: /code
     volumes:
@@ -12,14 +12,14 @@ services:
         target: /code
     command: ["http-server"]
   api:
-    container_name: healthit_dev_api
-    ports:
+    container_name: debug_dev_api
+    ports: 
       - 3000:3000
-    environment:
-      - PGUSER=healthit_tracker
+    environment: 
+      - PGUSER=futureproof
       - PGHOST=db
-      - PGPASSWORD=healthitpass
-      - PGDATABASE=healthit
+      - PGPASSWORD=librarypass
+      - PGDATABASE=library
       - PGPORT=5432
       - NODE_ENV=development
     depends_on:
@@ -27,15 +27,15 @@ services:
     command: bash -c "npm install && npm run seedDev && npm run dev"
 
   db:
-    container_name: healthit_dev_db
+    container_name: debug_dev_db
     volumes:
       - "dbdata:/var/lib/postgresql/data"
-    environment:
-      - POSTGRES_DB=healthit
-      - POSTGRES_USER=healthit_tracker
-      - POSTGRES_PASSWORD=healthitpass
+    environment: 
+      - POSTGRES_DB=library
+      - POSTGRES_USER=futureproof
+      - POSTGRES_PASSWORD=librarypass
 volumes:
   dbdata:
 networks:
   default:
-    name: healthit_api
+    name: debug_api
