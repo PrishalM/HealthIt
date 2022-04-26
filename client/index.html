@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>HealthIt</title>
-  </head>
+</head>
 
-  <!-- Note for Doreen -->
-  <!-- Hi Doreen,  -->
-  <!-- You can delete this after but here is what I have changed in this file:  -->
-  <!-- 1. Amended the class name for the nav bar from nvbar to navbar -->
-  <!-- 2. Amended the elements main to a div -->
-  <!-- 3. Added a footer so we can add our github names at the end  -->
-  <!-- 4. Cleaned up/refactored the navigation bar to use the least amount of code to to do the jon  -->
-  <!-- 5. Cleaned up/refactored some of the code for the homepage section. I have added three columns. Only the intro and sign in columns are visible but there is a class named hide which hides that column. So we can toggle between the sign in col and the create account col based on a the event listener on the link -->
-  <!-- 6. Added the basic details for the create account col (no styling at this point) -->
-  <!-- 7. added the main section into a medium container so it automatically pushes to the edges on mobile -->
 
-  <body class="homepage-body">
+<body class="homepage-body">
     <!-- Navigation-->
     <nav class="navbar justify-content-center">
-      <a class="nav-link" href="#"><h1>HealthIt</h1></a>
+        <a class="nav-link" href="#">
+            <h1>HealthIt</h1>
+        </a>
     </nav>
     <!-- Homepage section  -->
-    <div class="container-md p-0">
-      <div class="center-container">
-        <!-- Intro Column -->
-        <div class="intro-col col-6">
-          <div class="p-3">
-            <h2>Are you ready?</h2>
-            <p>
-              HealthIt allows you to track your healthy habits. Start your
-              journey to a healthy life with HealthIt!
-            </p>
-            <img src="" alt="" />
-          </div>
-        </div>
+    <main class="container-md p-0">
+        <div class="center-container">
+            <!-- Intro Column -->
+            <div class="intro-col col-6">
+                <div class="p-3">
+                    <h2>Are you ready?</h2>
+                    <p>
+                        HealthIt allows you to track your healthy habits. Start your
+                        journey to a healthy life with HealthIt!
+                    </p>
+                    <img src="" alt="" />
+                </div>
+            </div>
 
-        <!-- Sign in Column -->
-        <div class="sign-in-col col-6"></div>
+            <!-- Sign in Column -->
+            <div class="sign-in-col col-6 form-container">
+                <form>
+                    <h2>Sign In</h2>
+                    <label for="email">Email</label><br>
+                    <input name="email" type="text" /><br>
+                    <label for="password">Password</label><br>
+                    <input name="password" type="password" /><br>
+                    <button type="button" class="submit-btn">Submit</button>
+                    <p><a href="">Forgot your password</a>?</p>
+                    <p>Don't have an account? <a href="#">Create account now</a>!</p>
+                </form>
+            </div>
 
-        <!-- Create account Column -->
-        <div class="create-account-col col-6 hide">
-          <div class="p-3">
-            <form>
-              <h2>Create Account</h2>
-              <label for="CAname">Name</label>
-              <input id="CAname" type="text" />
-              <label for="CAemail">Email</label>
-              <input id="CAemail" type="email" />
-              <label for="CApassword">Password</label>
-              <input id="CApassword" type="password" />
-              <button type="button" class="btn btn-primary">Submit</button>
-            </form>
-            <p>Already have an account?<a href="#">Sign in</a></p>
-          </div>
+            <!-- Create account Column -->
+            <div class="create-account-col col-6 hide">
+                <div class="p-3">
+                    <form>
+                        <h2>Create Account</h2>
+                        <label for="CAname">Name</label><br>
+                        <input id="CAname" type="text" /><br>
+                        <label for="CAemail">Email</label><br>
+                        <input id="CAemail" type="email" /><br>
+                        <label for="CApassword">Password</label><br>
+                        <input id="CApassword" type="password" /><br>
+                        <button type="button" class="submit-btn">Submit</button>
+                    </form>
+                    <p>Already have an account? <a href="#">Sign in</a></p>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
-    <footer>
-      <div class="container-md">
-        <p>
-          HealthIt ©2022. Created by
-          <a href="https://github.com/Dnayir">Diren Nayir</a>,
-          <a href="https://github.com/doreenkam">Doreen Kamushinda</a> and
-          <a href="https://github.com/PrishalM">Prishal Makwana</a>
-        </p>
-      </div>
-    </footer>
-  </body>
+        <footer>
+            <div class="container-md">
+                <p>
+                    HealthIt ©2022. Created by
+                    <a href="https://github.com/Dnayir">Diren Nayir</a>,
+                    <a href="https://github.com/doreenkam">Doreen Kamushinda</a> and
+                    <a href="https://github.com/PrishalM">Prishal Makwana</a>
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+
 </html>

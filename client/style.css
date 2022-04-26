@@ -1,16 +1,7 @@
-/* Note for Doreen  */
-/* Hi Doreen,    */
-/* You can delete this after but here is what I have changed in this file:  */
-/* 1. Updated the colour names to more descriptive names and amended this for each style  */
-/* 2. You can't add a background color for the body element as it will then be the same for all pages. So I have removed it from the body element and have added a class to the body and added the color there */
-/* 3. Adjusted the names of the styles so they are more descriptive */
-/* 4. Added a class called hide for the show/hide col */
-
-/*******************************************************************************/
-/* Generic  */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
 :root {
   --darkest-green: #1c471d;
@@ -18,6 +9,7 @@
   --light-green: #83bd75;
   --green-yellow: #e9efc0;
   --white: #ffffff;
+  --black: #000000;
 }
 
 body {
@@ -93,6 +85,70 @@ input,
 label,
 button {
   display: block;
+}
+
+/***** DESCRIPTION *****/
+
+.intro-col h2 {
+  color: var(--darkest-green);
+  font-weight: 700;
+}
+
+.intro-col p {
+  color: var(--darkest-green);
+  font-size: 23px;
+}
+
+/***** SIGN IN FORM *****/
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.form-container label {
+  color: var(--darkest-green);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.form-container input {
+  background-color: var(--green-yellow);
+  border: 1px solid var(--green);
+  font-size: 15px;
+  height: 45px;
+  margin-top: -25px;
+  margin-bottom: -15px;
+  width: 100%;
+}
+
+.form-container p {
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+}
+
+.form-container .submit-btn {
+  background-color: var(--darkest-green);
+  border: none;
+  border-radius: 25px;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  height: 45px;
+  margin: 10px 0px 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-container a {
+  text-decoration: none;
 }
 
 /*******************************************************************************/
