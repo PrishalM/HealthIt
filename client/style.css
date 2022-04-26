@@ -106,13 +106,13 @@ button {
   justify-content: center;
 }
 
-.form-container h2 {
+h2 {
   font-family: "Inter", sans-serif;
   font-size: 26px;
   margin-bottom: 15px;
 }
 
-.form-container label {
+label {
   color: var(--darkest-green);
   font-family: "Inter", sans-serif;
   font-size: 15px;
@@ -134,7 +134,7 @@ button {
   margin: 10px;
 }
 
-.form-container .submit-btn {
+.submit-btn {
   background-color: var(--darkest-green);
   border: none;
   border-radius: 25px;
@@ -156,6 +156,16 @@ button {
 
 /*******************************************************************************/
 /* Create habit page  */
+
+/* .input-group {
+  background-color: var(--green-yellow);
+  border: 1px solid var(--green);
+  font-size: 15px;
+  height: 45px;
+  margin-top: -25px;
+  margin-bottom: -15px;
+  width: 100%;
+} */
 
 /*******************************************************************************/
 /* Edit habit page   */
