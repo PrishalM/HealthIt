@@ -25,10 +25,7 @@ class User {
     return new Promise(async (resolve, reject) => {
       try {
         let userData = await db.query(
-          `SELECT * 
-                                                    FROM users
-                                                    WHERE users.user_id = $1;`,
-          [id]
+          `SELECT * FROM users WHERE users.id = $1;`, [id]
         );
         let user = new User(userData.rows[0]);
         resolve(user);
