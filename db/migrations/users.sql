@@ -5,5 +5,5 @@ CREATE TABLE users (
     user_name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    habit_id integer
+    habit_id INT
 )
