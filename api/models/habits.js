@@ -14,7 +14,7 @@ class Habit{
         return new Promise (async (resolve, reject) => {
             try {
                 let habitData = await db.query(`SELECT * FROM habits;`);
-                let habits = habitData.rows.map(b => new habit(b));
+                let habits = habitData.rows.map((b) => new habit(b));
                 resolve (habits);
             } catch (err) {
                 reject(`Habit not found, error: ${err}`);

@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/users');
 
 // index route - gets all users:
 async function index (req, res) {
