@@ -1,73 +1,161 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
 :root {
-  --dark-color: #4e944f;
-  --med-color: #83bd75;
-  --light-color: #e9efc0;
-  --white-color: #ffffff;
-  --text-color: #1c471d;
+  --darkest-green: #1c471d;
+  --green: #4e944f;
+  --light-green: #83bd75;
+  --green-yellow: #e9efc0;
+  --white: #ffffff;
+  --black: #000000;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--med-color);
 }
 
-.nvbar {
-  background-color: var(--text-color);
+.navbar {
+  background-color: var(--darkest-green);
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
-.nvbar a {
-  color: var(--white-color);
+.navbar h1 {
+  color: var(--white);
   font-family: "Playfair Display", serif;
-  font-size: 4vw;
+  font-size: 64px;
 }
 
-.nvbar a:hover {
-  color: var(--white-color);
+.navbar h1:hover {
+  color: var(--green);
 }
 
-.container-one {
-  background-color: var(--light-color);
-  margin: 50px auto;
-  margin-top: 150px;
-  height: 500px;
-  max-width: 500px;
+.hide {
+  display: none;
 }
 
-.container-two {
-  background-color: var(--white-color);
-  margin: 50px auto;
-  margin-top: 150px;
-  height: 500px;
-  max-width: 500px;
-}
-
-form {
+footer {
+  padding: 20px;
+  background-color: var(--darkest-green);
+  text-align: center;
   position: relative;
-  bottom: 250px;
-  max-width: 420px;
-  margin-left: 400px;
+  bottom: 0;
 }
 
-.float-container {
-  margin: auto;
-  padding-top: 100px;
+footer,
+footer a {
+  color: var(--white);
+}
+
+/*******************************************************************************/
+/* Home page  */
+
+.homepage-body {
+  background-color: var(--light-green);
+}
+
+.center-container {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   display: flex;
-  flex-direction: row;
-  width: 130vh;
 }
 
-.float-child {
-  background-color: var(--light-color);
+.intro-col {
+  background-color: var(--green-yellow);
   height: 400px;
   padding: 20px;
 }
 
-.float-child-two {
-  background-color: var(--white-color);
+.sign-in-col {
+  background-color: var(--white);
   height: 400px;
   padding: 20px;
 }
+
+.create-account-col {
+  background-color: var(--white);
+  height: 400px;
+  padding: 20px;
+}
+
+input,
+label,
+button {
+  display: block;
+}
+
+/***** DESCRIPTION *****/
+
+.intro-col h2 {
+  color: var(--darkest-green);
+  font-weight: 700;
+}
+
+.intro-col p {
+  color: var(--darkest-green);
+  font-size: 23px;
+}
+
+/***** SIGN IN FORM *****/
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.form-container label {
+  color: var(--darkest-green);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.form-container input {
+  background-color: var(--green-yellow);
+  border: 1px solid var(--green);
+  font-size: 15px;
+  height: 45px;
+  margin-top: -25px;
+  margin-bottom: -15px;
+  width: 100%;
+}
+
+.form-container p {
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+}
+
+.form-container .submit-btn {
+  background-color: var(--darkest-green);
+  border: none;
+  border-radius: 25px;
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  height: 45px;
+  margin: 10px 0px 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-container a {
+  text-decoration: none;
+}
+
+/*******************************************************************************/
+/* Dashboard page  */
+
+/*******************************************************************************/
+/* Create habit page  */
+
+/*******************************************************************************/
+/* Edit habit page   */
