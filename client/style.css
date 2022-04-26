@@ -108,7 +108,7 @@ button {
 
 h2 {
   font-family: "Inter", sans-serif;
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 15px;
 }
 
@@ -157,20 +157,26 @@ label {
 /*******************************************************************************/
 /* Create habit page  */
 
-.input-group {
-  background-color: var(--green-yellow);
-  border: 1px solid var(--green);
-  font-size: 15px;
-  height: 45px;
-  margin-top: -25px;
-  margin-bottom: -15px;
-  width: 100%;
-}
-
 .container-fluid {
-  width: 75%;
+  background-color: rgb(255, 255, 255);
+  width: 90%;
   border: 6px solid #ffffff;
   border-radius: 20px;
+}
+
+.btn-success {
+  background-color: var(--green);
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: none;
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*******************************************************************************/
