@@ -29,10 +29,7 @@ class Habit {
     return new Promise(async (resolve, reject) => {
       try {
         let habitData = await db.query(
-          `SELECT * 
-                                                    FROM habits
-                                                    WHERE habits.habit_id = $1;`,
-          [id]
+          `SELECT * FROM habits WHERE habits.id = $1;`, [id]
         );
         let habit = new Habit(habitData.rows[0]);
         resolve(habit);
@@ -47,10 +44,7 @@ class Habit {
     return new Promise(async (resolve, reject) => {
       try {
         let habitDataByUser = await db.query(
-          `SELECT *
-                                                        FROM habits
-                                                        WHERE user_id = $1`,
-          [user_id]
+          `SELECT * WHERE user_id = $1`, [user_id]
         );
 
         let habits = habitDataByUser.rows.map((r) => new Habit(r));
