@@ -3,6 +3,7 @@ const db = require("../dbConfig/init");
 class User {
   constructor(data) {
     this.user_id = data.user_id;
+    this.username = data.username;
     this.email = data.email;
     this.password = data.password;
   }
@@ -25,7 +26,8 @@ class User {
     return new Promise(async (resolve, reject) => {
       try {
         let userData = await db.query(
-          `SELECT * FROM users WHERE users.id = $1;`, [id]
+          `SELECT * FROM users WHERE users.id = $1;`,
+          [id]
         );
         let user = new User(userData.rows[0]);
         resolve(user);

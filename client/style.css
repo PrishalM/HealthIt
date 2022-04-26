@@ -39,10 +39,6 @@ body {
   color: var(--green);
 }
 
-.hide {
-  display: none;
-}
-
 h2 {
   font-weight: 700;
   font-size: 36px;
@@ -130,6 +126,10 @@ footer a {
 
 .homepage-body {
   background-color: var(--light-green);
+}
+
+.createpage-body {
+  background-color: var(--green);
 }
 
 .center-container {
@@ -376,7 +376,8 @@ h2 {
   height: 150px;
   width: 150px;
   margin: 10px;
-  border: none;
+  border: 2px solid var(--darkest-green);
+  border-radius: 20px;
 }
 
 .selection {
@@ -385,5 +386,20 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
 /*******************************************************************************/
 /* Edit habit page   */
+
+.edit-habit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn-success .border {
+  border: 1px solid var(--darkest-green);
+}
+
+.hide {
+  display: none;
+}
