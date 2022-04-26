@@ -245,6 +245,12 @@ button {
   justify-content: center;
 }
 
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
 #CHbutton {
   width: 360px;
 }
@@ -358,5 +364,26 @@ button {
 /*******************************************************************************/
 /* Create habit page  */
 
+.container-fluid {
+  background-color: rgb(255, 255, 255);
+  width: 90%;
+  border: 6px solid #ffffff;
+  border-radius: 20px;
+}
+
+.btn-success {
+  background-color: var(--green);
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: none;
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 /*******************************************************************************/
 /* Edit habit page   */
