@@ -44,7 +44,7 @@ document.getElementById("water").addEventListener("click", function () {
 // Create new habit button *
 document
   .getElementById("createNewHabitBtn")
-  .addEventListener("click", submitHabit);
+  .addEventListener("click", postHabit);
 
 async function postHabit(e) {
   e.preventDefault();
