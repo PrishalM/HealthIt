@@ -44,6 +44,25 @@ document.getElementById("water").addEventListener("click", function () {
 // Create new habit button *
 document
   .getElementById("createNewHabitBtn")
-  .addEventListener("click", function () {
-    alert("new habit btn ");
-  });
+  .addEventListener("click", submitHabit);
+
+async function postHabit(e) {
+  e.preventDefault();
+  try {
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
+    };
+
+    const response = await fetch("http://localhost:3000/habits", options);
+    const { id, err } = await response.json();
+    if (err) {
+      throw Error(err);
+    } else {
+      window.location.hash = `#habits/${id}`;
+    }
+  } catch (err) {
+    console.warn(err);
+  }
+}
