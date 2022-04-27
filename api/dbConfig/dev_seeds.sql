@@ -6,7 +6,7 @@ VALUES
 (1, 'Sleep', 3),
 (2, 'Water', 2),
 (3, 'Exercise', 2);
-INSERT INTO users (user_name, email, password, habit_id)
+INSERT INTO users (username, email, password, habit_id)
 VALUES
 ('JohnDoe', 'johndoe@gmail.com', 'jdoe', 1),
 ('JaneDoe', 'janedoe@gmail.com', 'jjdoe', 2),
