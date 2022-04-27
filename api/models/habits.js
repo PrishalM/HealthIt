@@ -29,7 +29,8 @@ class Habit {
     return new Promise(async (resolve, reject) => {
       try {
         let habitData = await db.query(
-          `SELECT * FROM habits WHERE habits.id = $1;`, [id]
+          `SELECT * FROM habits WHERE habits.id = $1;`,
+          [id]
         );
         let habit = new Habit(habitData.rows[0]);
         resolve(habit);
@@ -43,9 +44,9 @@ class Habit {
   static HabitsByUserId(user_id) {
     return new Promise(async (resolve, reject) => {
       try {
-        let habitDataByUser = await db.query(
-          `SELECT * WHERE user_id = $1`, [user_id]
-        );
+        let habitDataByUser = await db.query(`SELECT * WHERE user_id = $1`, [
+          user_id,
+        ]);
 
         let habits = habitDataByUser.rows.map((r) => new Habit(r));
         resolve(habits);
@@ -77,9 +78,7 @@ class Habit {
   destroy() {
     return new Promise(async (resolve, reject) => {
       try {
-        await db.query("DELETE FROM habits WHERE habit_id = $1;", [
-          this.habit_id,
-        ]);
+        await db.query("DELETE FROM habits WHERE id = $1;", [this.habit_id]);
         resolve("Habit has been deleted");
       } catch (err) {
         reject(`Habit could not be deleted, error: ${err}`);
