@@ -144,17 +144,11 @@ button {
   display: block;
 }
 
-.create-account-col {
-  background-color: var(--white);
-  height: 400px;
-  padding: 20px;
-}
-
 /***** Intro col *****/
 
 .intro-col {
   background-color: var(--green-yellow);
-  height: 400px;
+  height: 450px;
   padding: 20px;
 }
 
@@ -166,26 +160,38 @@ button {
 /***** Sign in col *****/
 .sign-in-col {
   background-color: var(--white);
-  height: 400px;
+  height: 450px;
   padding: 20px;
   display: flex;
   justify-content: center;
 }
 
-.sign-in-col input {
+.sign-in-col input,
+.create-account-col input {
   width: 100%;
 }
 
-.sign-in-col p {
+.sign-in-col p,
+.create-account-col p {
   font-size: 15px;
   text-align: center;
   color: var(--darkest-green);
   margin: 10px;
 }
 
-.sign-in-col a {
+.sign-in-col a,
+.create-account-col a {
   text-decoration: none;
   color: var(--darkest-green);
+}
+
+/***** Create account col *****/
+.create-account-col {
+  background-color: var(--white);
+  height: 450px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /*******************************************************************************/
@@ -221,7 +227,7 @@ button {
   font-weight: 700;
 }
 
-.settingsBtn {
+#settingsBtn {
   background-color: var(--light-green);
   color: var(--darkest-green);
   border-radius: 25px;
@@ -231,12 +237,12 @@ button {
   justify-content: center;
   align-items: center;
 }
-.settingsBtn:hover {
+#settingsBtn:hover {
   background-color: var(--darkest-green);
   color: var(--light-green);
 }
 
-.settingsBtn i {
+#settingsBtn i {
   font-size: 1.25rem;
 }
 
@@ -355,9 +361,23 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   #habit-output {
-    display: flex;
+    display: block;
+    padding: 0;
+  }
+  .btn {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .habit {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .dashboard-container {
+    padding: 0;
   }
 }
 
@@ -408,3 +428,10 @@ h2 {
 .editHabit {
   margin-top: 40px;
 }
+
+
+
+.hide {
+  display: none;
+}
+

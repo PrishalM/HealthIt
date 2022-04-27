@@ -11,7 +11,10 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <title>HealthIt</title>
-</head>
+
+    <script defer src="script.js"></script>
+  </head>
+
 
 <body class="homepage-body">
     <!-- Navigation-->
@@ -35,40 +38,44 @@
                 </div>
             </div>
 
-            <!-- Sign in Column -->
-            <div class="sign-in-col col-6">
-                <form>
-                    <h2>Sign In</h2>
-                    <label for="SIemail">Email</label>
-                    <input name="SIemail" type="text" />
-                    <label for="SIpassword">Password</label>
-                    <input name="SIpassword" type="password" />
-                    <button id="SIbutton" type="SIbutton" class="btn btn-primary my-3">
-                        Submit
-                    </button>
-                    <p><a href="">Forgot your password</a>?</p>
-                    <p>Don't have an account? <a href="#">Create account now</a>!</p>
-                </form>
-            </div>
 
-            <!-- Create account Column -->
-            <div class="create-account-col col-6 hide">
-                <div class="p-3">
-                    <form>
-                        <h2>Create Account</h2>
-                        <label for="CAname">Name</label>
-                        <input id="CAname" type="text" />
-                        <label for="CAemail">Email</label>
-                        <input id="CAemail" type="email" />
-                        <label for="CApassword">Password</label>
-                        <input id="CApassword" type="password" />
-                        <button id="CAbutton" type="button" class="btn btn-primary my-3">
-                            Submit
-                        </button>
-                    </form>
-                    <p>Already have an account? <a href="#">Sign in</a></p>
-                </div>
-            </div>
+        <!-- Sign in Column -->
+        <div class="sign-in-col col-6 hide">
+          <form>
+            <h2>Sign In</h2>
+            <label for="SIemail">Email</label>
+            <input name="SIemail" type="text" />
+            <label for="SIpassword">Password</label>
+            <input name="SIpassword" type="password" />
+            <button id="SIbutton" type="SIbutton" class="btn btn-primary my-3">
+              Submit
+            </button>
+            <p><a href="">Forgot your password</a>?</p>
+            <p>
+              Don't have an account?
+              <a href="" id="createAccountLink">Create account now</a>!
+            </p>
+          </form>
+        </div>
+
+        <!-- Create account Column -->
+
+        <div class="create-account-col col-6 hide">
+          <form>
+            <h2>Create Account</h2>
+            <label for="CAname">Name</label>
+            <input id="CAname" type="text" />
+            <label for="CAemail">Email</label>
+            <input id="CAemail" type="email" />
+            <label for="CApassword">Password</label>
+            <input id="CApassword" type="password" />
+            <button id="CAbutton" type="button" class="btn btn-primary my-3">
+              Submit
+            </button>
+            <p>
+              Already have an account? <a href="" id="signInLink">Sign in</a>
+            </p>
+          </form>
         </div>
     </main>
     <footer>

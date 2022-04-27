@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -19,5 +18,13 @@
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "jest": "^28.0.1",
+    "supertest": "^6.2.2"
+  },
+  "description": ""
 }
