@@ -3,11 +3,79 @@
 
 // Fetch data for the user
 
-//
+async function fetchDetailsForUser() {
+  let params = new URLSearchParams(document.location.search);
+  let id = params.get("id");
+  try {
+    const res = await fetch(`https://localhost:3000/users/${id}`);
+    const data = await response.json();
+    const { username } = data;
+    document.getElementById("dashboard-name").textContent = username;
+  } catch (err) {
+    console.warn(err);
+  }
+}
+
+async function fetchHabitsForUser() {
+  try {
+    const res = await fetch("https://localhost:3000/habits")
+      .then((res) => res.json())
+      .then((data) => {
+        let output = ``;
+        data.forEach(function (habit) {
+          output += `
+          <div class="habit">
+          <!-- First row with name, progress bar and more details icon -->
+          <div class="row">
+            <div class="col-4"><h5 class="habit-name">${habit.habit_name}</h5></div>
+            <div class="col-6 habit-progress-section">
+              <div class="habit-progress-container">
+                <div class="habit-progressbar" style="width: 80%">80%</div>
+              </div>
+            </div>
+            <div class="col-1">
+              <i id="" class="bi bi-three-dots viewMoreBtn"></i>
+            </div>
+          </div>
+          <!-- Second row with goal and edit link -->
+          <div class="row">
+            <div class="col-8">
+              <p class="habit-goal">Goal: X units a day</p>
+            </div>
+            <div class="col-4 edit-link">
+              <a href="">Edit<i class="ps-2 bi bi-pencil"></i></a>
+            </div>
+          </div>
+          <!-- Third row with log units header -->
+          <div class="row"><h6 class="habit-log-unit">Log unit</h6></div>
+          <!-- fourth row with update progress field & button  -->
+          <div class="row justify-content-between">
+            <div class="col-5 habit-input-log">
+              <input id="HabitUnitInput" type="text" />
+            </div>
+            <div class="col-7 d-flex justify-content-end">
+              <button
+                id="UpdateUnitBtn"
+                type="button"
+                class="btn btn-outline-primary"
+              >
+                Update progress
+              </button>
+            </div>
+          </div>
+        </div>
+                      `;
+        });
+        document.getElementById("habit-output").innerHTML = output + `<br>`;
+      });
+  } catch (err) {
+    console.log(`ERROR: ${err}`);
+  }
+}
 
 // Settings button
 document.querySelector("#settingsBtn").addEventListener("click", function () {
-  alert("settings btn");
+  document.getElementById("SettingContainers").classList.remove("hide");
 });
 
 // Create habit button
