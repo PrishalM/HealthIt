@@ -3,6 +3,7 @@ const db = require("../dbConfig/init");
 class User {
   constructor(data) {
     this.user_id = data.user_id;
+    this.username = data.username;
     this.email = data.email;
     this.password = data.password;
   }
@@ -47,9 +48,10 @@ class User {
           [username, email, password]
         );
 
-        let newUser = new User(result.rows[0]);
-        console.log(newUser);
-        resolve(newUser);
+        // let newUser = new User(result.rows[0]);
+        // console.log(newUser);
+        // resolve(newUser);
+        resolve(result.rows[0]);
       } catch (err) {
         reject(`User could not be created, error: ${err}`);
       }
