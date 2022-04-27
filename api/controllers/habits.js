@@ -55,9 +55,10 @@ async function patch(req, res) {
 async function destroy(req, res) {
   try {
     const habit = await Habit.findByHabitId(req.params.id);
-    const res = await habit.destroy();
+    const result = await habit.destroy();
     res.status(204).end();
   } catch (err) {
+    console.log(err);
     res.status(404).json({ err });
   }
 }

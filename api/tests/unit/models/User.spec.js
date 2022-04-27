@@ -10,7 +10,7 @@ describe("User", () => {
   afterAll(() => jest.resetAllMocks());
 
   describe("all", () => {
-    test("it resolves with habits on successful db query", async () => {
+    test("it resolves with user on successful db query", async () => {
       jest.spyOn(db, "query").mockResolvedValueOnce({ rows: [{}, {}, {}] });
       const all = await User.all;
       expect(all).toHaveLength(3);
@@ -18,7 +18,7 @@ describe("User", () => {
   });
 
   describe("findById", () => {
-    test("it resolves with author on successful db query", async () => {
+    test("it resolves with user on successful db query", async () => {
       let userData = { id: 1, name: "Test User" };
       jest.spyOn(db, "query").mockResolvedValueOnce({ rows: [userData] });
       const result = await User.findUserById(1);
@@ -27,10 +27,16 @@ describe("User", () => {
   });
 
   describe("create", () => {
-    test("it resolves with author on successful db query", async () => {
-      let userData = { id: 1, name: "New User" };
+    test("it resolves with user on successful db query", async () => {
+      let userData = {
+        user_id: 1,
+        username: "New User",
+        email: "new@user.com",
+        password: "Password1",
+      };
       jest.spyOn(db, "query").mockResolvedValueOnce({ rows: [userData] });
-      const result = await User.create("New User");
+      const result = await User.create(userData);
+      console.log(result);
       expect(result).toBeInstanceOf(User);
     });
   });

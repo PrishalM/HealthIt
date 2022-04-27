@@ -394,11 +394,11 @@ h2 {
 }
 
 .btn-success {
-  background-color: var(--green);
+  background-color: var(--light-green);
   height: 150px;
   width: 150px;
   margin: 10px;
-  border: 2px solid var(--darkest-green);
+  border: 1px solid transparent;
   border-radius: 20px;
 }
 
@@ -407,6 +407,11 @@ h2 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#recommendUnits {
+  color: var(--green);
+  font-size: 16px;
 }
 
 /*******************************************************************************/
@@ -432,7 +437,7 @@ h2 {
 
 .hide {
   display: none;
-}
+
 
 /* settings */
 li {
@@ -449,3 +454,4 @@ li a {
 i {
   padding: 10px;
 }
+

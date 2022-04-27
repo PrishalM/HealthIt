@@ -104,7 +104,7 @@ describe("habit controller", () => {
   //   This is not working
   describe("destroy", () => {
     test("it returns a 204 status code on successful deletion", async () => {
-      jest.spyOn(Habit.prototype, "destroy").mockResolvedValue("Deleted");
+      jest.spyOn(Habit.prototype, "destroy");
 
       const mockReq = { params: { id: 1 } };
       await habitController.destroy(mockReq, mockRes);
