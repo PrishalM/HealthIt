@@ -41,7 +41,7 @@ document.getElementById("water").addEventListener("click", function () {
     "We recommend at least 2000 milliliters of water a day.";
 });
 
-// Create new habit button
+// Create new habit button *
 document
   .getElementById("createNewHabitBtn")
   .addEventListener("click", function () {
