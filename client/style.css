@@ -158,8 +158,9 @@ button {
   font-size: 23px;
 }
 
-/***** Sign in col *****/
-.sign-in-col {
+/***** Sign in & create account col *****/
+.sign-in-col,
+.create-account-col {
   background-color: var(--white);
   height: 450px;
   padding: 20px;
@@ -180,19 +181,15 @@ button {
   margin: 10px;
 }
 
-.sign-in-col a,
-.create-account-col a {
-  text-decoration: none;
+.sign-in-col a {
+  text-decoration: underline;
   color: var(--darkest-green);
 }
 
-/***** Create account col *****/
-.create-account-col {
-  background-color: var(--white);
-  height: 450px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+.sign-in-col span,
+.create-account-col span {
+  text-decoration: underline;
+  color: var(--darkest-green);
 }
 
 /*******************************************************************************/
@@ -329,10 +326,11 @@ h2 {
 .edit-link,
 .edit-link a {
   color: var(--darkest-green);
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 500;
   display: flex;
   justify-content: end;
+  align-items: center;
 }
 
 .habit-input-log {
@@ -427,16 +425,8 @@ h2 {
   border: 1px solid var(--darkest-green);
 }
 
-.hide {
-  display: none;
-}
-
 .editHabit {
   margin-top: 40px;
-}
-
-.hide {
-  display: none;
 }
 
 /* settings */
@@ -455,3 +445,6 @@ i {
   padding: 10px;
 }
 
+.hide {
+  display: none;
+}
