@@ -24,19 +24,21 @@ static findUserByEmail(email) {
   });
  }  
 
- static comparePassword(email, password) {
+ static comparePassword({email, password}) {
+     console.log(email, password)
     return new Promise(async (resolve, reject) => {
       try {
         let passwordData = await db.query(
           `SELECT password FROM users WHERE email = $1;`,
           [email]
         );
-        if (password === passwordData) {
+        if (password === passwordData.rows[0]["password"]) {
         console.log("Login successful!")
-        } else {
-        console.log("Login failed")
-        };
-        resolve();
+        resolve({key: "value"});
+        } else { throw "invalid login credentials";
+        // console.log("Login failed")
+         };
+        
       } catch (err) {
         reject(`User not found, error: ${err}`);
       }
