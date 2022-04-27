@@ -431,7 +431,7 @@ h2 {
 
 /* settings */
 #SettingContainers {
-  position: relative;
+  position: absolute;
   margin: auto;
   left: 0;
   right: 0;
