@@ -17,7 +17,7 @@
     <script defer src="scripts/dashboard.js"></script>
   </head>
 
-  <body onload="getAll()" class="bashboard-body">
+  <body onload="getAll(), fetchDetailsForUser()" class="bashboard-body">
     <!-- Navigation-->
     <nav class="navbar justify-content-center">
       <a class="nav-link" href="#">
@@ -26,6 +26,46 @@
     </nav>
     <!-- Dashboard section  -->
     <main class="container-md p-0">
+       <!-- Container for Settings Section -->
+    <div id="SettingContainers" class="container-fluid hide">
+
+      <div class="row">
+          <div class="col-sm-11 p-3">
+              <h5>Settings</h5>
+          </div>
+          <div class=" col-sm-1">
+              <button type="button" id="settingsCloseBtn" class="btn-close" aria-label="Close"></button>
+          </div>
+      </div>
+
+      <!-- Top Row  -->
+      <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+              <button type="button" class="btn btn-success">USER</button>
+              <h2 style="display: inline-block;">fullName</h1>
+          </div>
+          <div class="col-sm-2"></div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+              <ul>
+                  <li><i class="fa-solid fa-user"></i><a href=""> Account Settings</a></li>
+                  <li><i class="fa-solid fa-circle-question"></i><a href=""> Help and support</a></li>
+                  <li><i class="fa-solid fa-bell"></i></i><a href=""> Notification settings</a></li>
+                  <li><i class="fa-solid fa-lock"></i><a href=""> Privacy settings</a></li>
+                  <li><i class="fa-solid fa-universal-access"></i><a href=""> Accessibility & display</a></li>
+                  <li><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="" id="logOutBtn"> Log
+                          out</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-4"></div>
+      </div>
+
+  </div>
       <div class="dashboard-container">
         <!-- Top row with image, name and setting button -->
         <div class="row">
@@ -164,6 +204,8 @@
           </div>
         </div>
       </div>
+    
+    
     </main>
     <footer>
       <div class="container-md">

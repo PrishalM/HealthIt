@@ -430,6 +430,13 @@ h2 {
 }
 
 /* settings */
+#SettingContainers {
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
 li {
   padding: 10px;
   list-style-type: none;
@@ -458,6 +465,7 @@ i {
 .calendarItems li {
   font-size: 13px;
   float: left;
+}
 
 .hide {
   display: none;
