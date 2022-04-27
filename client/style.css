@@ -445,6 +445,20 @@ i {
   padding: 10px;
 }
 
+.dot {
+  height: 25px;
+  width: 25px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  display: inline-block;
+  padding: 15px;
+  margin-left: 10px;
+}
+
+.calendarItems li {
+  font-size: 13px;
+  float: left;
+
 .hide {
   display: none;
 }
