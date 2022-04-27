@@ -27,6 +27,7 @@
         <div class="center-container">
             <!-- Container for Create Section -->
             <div class="container-fluid">
+
                 <!-- Top Row  -->
                 <div class="row">
                     <div class="col-sm-11 p-3">
@@ -42,7 +43,7 @@
 
                 <!-- Middle Row -->
                 <div class="row">
-                    <div class="col-sm-12 px-5 py-3 selection">
+                    <div class="col-sm-12 px-5 py-3 selection" id="habit_name">
                         <button type="button" class="btn btn-success" id="sleep">Sleep</button>
                         <button type="button" class="btn btn-success" id="exercise">Exercise</button>
                         <button type="button" class="btn btn-success" id="water">Water</button>
@@ -56,18 +57,18 @@
                         <label for="frequency">Frequency per day</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control" aria-label="measurement"
-                                aria-describedby="basic-addon2">
+                                aria-describedby="basic-addon2" id="frequency">
                             <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon2">unit</span>
                             </div>
-                           
+
                         </div>
                         <p id="recommendUnits"></p>
                         <!-- Submit Button -->
                         <button id="createNewHabitBtn" type="button" class="btn btn-primary my-3">Submit</button>
 
                     </div>
-                
+
                 </div>
 
 

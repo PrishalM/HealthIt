@@ -59,12 +59,11 @@ class Habit {
   static async create(habitData) {
     return new Promise(async (resolve, reject) => {
       try {
-        const { habit_id, user_id, habit_name, frequency, frequency_count } =
-          habitData;
+        const { user_id, habit_name, frequency, frequency_count } = habitData;
 
         let result = await db.query(
-          `INSERT INTO habits (habit_id, user_id, habit_name, frequency, frequency_count) VALUES($1, $2, $3, $4, $5,) RETURNING *;`,
-          [habit_id, user_id, habit_name, frequency, frequency_count]
+          `INSERT INTO habits (user_id, habit_name, frequency, frequency_count) VALUES($1, $2, $3, $4,) RETURNING *;`,
+          [user_id, habit_name, frequency, frequency_count]
         );
         let newHabit = new Habit(result.rows[0]);
         console.log(newHabit);
