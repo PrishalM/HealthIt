@@ -1,5 +1,9 @@
 ////////////////////////////////////////////////////////////////
-// Dashboard event listeners
+// Dashboard
+
+// Fetch data for the user
+
+//
 
 // Settings button
 document.querySelector("#settingsBtn").addEventListener("click", function () {

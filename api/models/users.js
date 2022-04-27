@@ -37,7 +37,23 @@ class User {
     });
   }
 
-  // creat new user
+//return user by email
+static findUserByEmail(email) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let userData = await db.query(
+        `SELECT * FROM users WHERE users.email = $1;`,
+        [email]
+      );
+      let user = new User(userData.rows[0]);
+      resolve(user);
+    } catch (err) {
+      reject(`User not found, error: ${err}`);
+    }
+  });
+}
+
+  // create new user
   static async create(userData) {
     return new Promise(async (resolve, reject) => {
       try {
