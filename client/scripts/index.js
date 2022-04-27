@@ -6,8 +6,9 @@ document.getElementById("SIbutton").addEventListener("click", async e => {
   e.preventDefault();
   
   async function login(e){
-    e.preventDefault();
+    // e.preventDefault();
     let userInputEmail = document.getElementById("SIemail").value;
+    console.log(userInputEmail);
     let userInputPassword = document.getElementById("SIpassword").value;
     if (userInputEmail.length > 0 && userInputPassword.length > 0) {
       try {
@@ -21,19 +22,20 @@ document.getElementById("SIbutton").addEventListener("click", async e => {
           headers: { "Content-type": "application/json" },
           body: JSON.stringify(login)
         };
-
+          console.log(login);
         const response = await fetch ("http://localhost:3000/auth", options);
         const { id, err } = await response.json();
-      }
+      } 
         catch (err) {
         console.warn(err);
-      }
+      };
     } else {
       alert(
         "Incorrect email and password combination. Please try again."
       );
     }
   };
+  login();
 }
 );
   
