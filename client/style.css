@@ -1,6 +1,7 @@
 /*******************************************************************************/
 /* Fonts  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 
 /*******************************************************************************/
@@ -429,9 +430,22 @@ h2 {
   margin-top: 40px;
 }
 
-
-
 .hide {
   display: none;
 }
 
+/* settings */
+li {
+  padding: 10px;
+  list-style-type: none;
+}
+
+li a {
+  color: var(--darkest-green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+i {
+  padding: 10px;
+}
