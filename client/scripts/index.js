@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////
 // Index event listeners
 
+
 // Sign in button
 document.getElementById("SIbutton").addEventListener("click", async e => {
   e.preventDefault();
@@ -8,7 +9,6 @@ document.getElementById("SIbutton").addEventListener("click", async e => {
   async function login(e){
     // e.preventDefault();
     let userInputEmail = document.getElementById("SIemail").value;
-    console.log(userInputEmail);
     let userInputPassword = document.getElementById("SIpassword").value;
     if (userInputEmail.length > 0 && userInputPassword.length > 0) {
       try {
@@ -24,7 +24,10 @@ document.getElementById("SIbutton").addEventListener("click", async e => {
         };
           console.log(login);
         const response = await fetch ("http://localhost:3000/auth", options);
-        const { id, err } = await response.json();
+        if (response.status == 200) {
+          //Store the token
+          window.location.assign("dashboard.html");
+        }
       } 
         catch (err) {
         console.warn(err);

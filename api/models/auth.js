@@ -35,7 +35,8 @@ static findUserByEmail(email) {
         if (password === passwordData.rows[0]["password"]) {
         console.log("Login successful!")
         resolve({key: "value"});
-        } else { throw "invalid login credentials";
+        } else {
+            throw "invalid login credentials";
         // console.log("Login failed")
          };
         
