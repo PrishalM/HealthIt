@@ -2,9 +2,41 @@
 // Index event listeners
 
 // Sign in button
-document.getElementById("SIbutton").addEventListener("click", function () {
-  // Add function here
-});
+document.getElementById("SIbutton").addEventListener("click", async e => {
+  e.preventDefault();
+  
+  async function login(e){
+    e.preventDefault();
+    let userInputEmail = document.getElementById("SIemail").value;
+    let userInputPassword = document.getElementById("SIpassword").value;
+    if (userInputEmail.length > 0 && userInputPassword.length > 0) {
+      try {
+        const login = {
+          email: userInputEmail,
+          password: userInputPassword
+        };
+
+        const options = {
+          method: 'POST',
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(login)
+        };
+
+        const response = await fetch ("http://localhost:3000/auth", options);
+        const { id, err } = await response.json();
+      }
+        catch (err) {
+        console.warn(err);
+      }
+    } else {
+      alert(
+        "Incorrect email and password combination. Please try again."
+      );
+    }
+  };
+}
+);
+  
 
 // Create account button
 document.getElementById("CAbutton").addEventListener("click", createAccount);
