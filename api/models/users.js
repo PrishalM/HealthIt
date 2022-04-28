@@ -37,21 +37,20 @@ class User {
     });
   }
 
-//return user by email
-static findUserByEmail(email) {
-  return new Promise(async (resolve, reject) => {
-    try {
-      let userData = await db.query(
-        `SELECT * FROM users WHERE users.email = $1;`,
-        [email]
-      );
-      let user = new User(userData.rows[0]);
-      resolve(user);
-    } catch (err) {
-      reject(`User not found, error: ${err}`);
-    }
-  });
-}
+  //return user by email
+  static findByEmail(email) {
+    return new Promise(async (res, rej) => {
+      try {
+        let result = await db.query("SELECT * FROM users WHERE email = $1", [
+          email,
+        ]);
+        let user = new User(result.rows[0]);
+        res(user);
+      } catch (err) {
+        rej(`Error retrieving user: ${err}`);
+      }
+    });
+  }
 
   // create new user
   static async create(userData) {

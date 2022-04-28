@@ -8,6 +8,6 @@ VALUES
 (3, 'Exercise', 2);
 INSERT INTO users (username, email, password, habit_id)
 VALUES
-('JohnDoe', 'johndoe@gmail.com', 'jdoe', 1),
+('JohnDoe', 'johndoe@gmail.com', '$2y$10$nrcLfGLJ2ZcwhsAu/qrUQOyoPmycazmiiJOkVATEprECVW/b1OlwC', 1),
 ('JaneDoe', 'janedoe@gmail.com', 'jjdoe', 2),
 ('DummyName', 'dummy@gmail.com', 'dummy', 3);
