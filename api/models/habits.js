@@ -41,13 +41,13 @@ class Habit {
   }
 
   // find habits based on user id
-  static HabitsByUserId(user_id) {
+  static habitsByUserId(id) {
     return new Promise(async (resolve, reject) => {
       try {
-        let habitDataByUser = await db.query(`SELECT * WHERE user_id = $1`, [
-          user_id,
-        ]);
-
+        let habitDataByUser = await db.query(
+          `SELECT * from habits WHERE user_id = $1`,
+          [id]
+        );
         let habits = habitDataByUser.rows.map((r) => new Habit(r));
         resolve(habits);
       } catch (err) {
