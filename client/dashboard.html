@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="style.css" />
     <title>Dashboard - HealthIt</title>
     <script defer src="scripts/dashboard.js"></script>
+    <script defer src="jwt-decode.js"></script>
   </head>
 
-  <body onload="getAll(), fetchDetailsForUser()" class="bashboard-body">
+  <body onload="fetchDetailsForUser(), fetchHabitsForUser()" class="bashboard-body">
     <!-- Navigation-->
     <nav class="navbar justify-content-center">
       <a class="nav-link" href="#">
