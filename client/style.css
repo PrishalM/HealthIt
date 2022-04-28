@@ -276,14 +276,13 @@ h2 {
 
 .habit-progress-section {
   display: flex;
-
   align-self: center;
 }
 
 .habit-progress-container {
-  width: 50%;
+  width: 50px;
   height: 22.5px;
-  position: relative;
+  /* position: relative; */
   background-color: var(--green);
   margin-bottom: 5px;
   -webkit-appearance: none;
@@ -295,7 +294,7 @@ h2 {
   background-color: var(--darkest-green);
   color: var(--white);
   height: 100%;
-  position: absolute;
+  /* position: relative; */
   line-height: inherit;
   -webkit-appearance: none;
   appearance: none;
