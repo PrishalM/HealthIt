@@ -10,7 +10,9 @@ async function fetchDetailsForUser() {
 
 async function fetchHabitsForUser() {
   try {
-    const res = await fetch("https://localhost:3000/habits")
+    const res = await fetch(
+      `https://localhost:3000/habits/user/${localStorage.getItem("id")}`
+    )
       .then((res) => res.json())
       .then((data) => {
         let percentage = habit.frequency_count / habit.frequency;

@@ -23,7 +23,7 @@ async function showHabitbyHabitId(req, res) {
 // show route: gets habit by user id
 async function showHabitsbyUser(req, res) {
   try {
-    const habit = await Habit.HabitsByUserId(req.params.id);
+    const habit = await Habit.habitsByUserId(req.params.id);
     res.status(200).json(habit);
   } catch (err) {
     res.status(404).json({ err });
