@@ -3,7 +3,7 @@ services:
     container_name: debug_dev_client
     build: ./client
     image: debug_client
-    ports: 
+    ports:
       - 8080:8080
     working_dir: /code
     volumes:
@@ -13,15 +13,16 @@ services:
     command: ["http-server"]
   api:
     container_name: debug_dev_api
-    ports: 
+    ports:
       - 3000:3000
-    environment: 
+    environment:
       - PGUSER=futureproof
       - PGHOST=db
       - PGPASSWORD=librarypass
       - PGDATABASE=library
       - PGPORT=5432
       - NODE_ENV=development
+      - SECRET=super-secret
     depends_on:
       - db
     command: bash -c "npm install && npm run seedDev && npm run dev"
@@ -30,7 +31,7 @@ services:
     container_name: debug_dev_db
     volumes:
       - "dbdata:/var/lib/postgresql/data"
-    environment: 
+    environment:
       - POSTGRES_DB=library
       - POSTGRES_USER=futureproof
       - POSTGRES_PASSWORD=librarypass
