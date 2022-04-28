@@ -57,7 +57,7 @@ document
 async function postHabit(e) {
   e.preventDefault();
   let frequency = document.getElementById("frequency").value;
-  console.log(frequency);
+
   try {
     const newHabit = {
       habit_name: habitChosen,
@@ -72,7 +72,11 @@ async function postHabit(e) {
 
     const response = await fetch("http://localhost:3000/habits", options);
     const { id, err } = await response.json();
-    // console.log(id);
+    console.log(response.status);
+    if (response.status === 201) {
+      //Store the token
+      window.location.assign("dashboard.html");
+    }
   } catch (err) {
     console.warn(err);
   }
