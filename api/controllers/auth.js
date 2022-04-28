@@ -22,7 +22,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findByEmail(req.body.email);
-    console.log(user.user_id);
+
     if (!user) {
       throw new Error("No user with this email");
     }
@@ -44,7 +44,7 @@ router.post("/login", async (req, res) => {
           id: user.user_id,
         });
       };
-      console.log(payload, process.env.SECRET);
+      // console.log(payload, process.env.SECRET);
       jwt.sign(payload, process.env.SECRET, { expiresIn: 60 }, sendToken);
     } else {
       throw new Error("User could not be authenticated");
