@@ -5,15 +5,7 @@
 async function fetchDetailsForUser() {
   let username = localStorage.getItem("username");
   document.getElementById("dashboard-name").textContent = username;
-
-  // try {
-  //   const res = await fetch(`https://localhost:3000/users/${id}`);
-  //   const data = await response.json();
-  //   const { username } = data;
-
-  // } catch (err) {
-  //   console.warn(err);
-  // }
+  document.getElementById("dashboard-setting-name").textContent = username;
 }
 
 async function fetchHabitsForUser() {
@@ -21,6 +13,7 @@ async function fetchHabitsForUser() {
     const res = await fetch("https://localhost:3000/habits")
       .then((res) => res.json())
       .then((data) => {
+        let percentage = habit.frequency_count / habit.frequency;
         let output = ``;
         data.forEach(function (habit) {
           output += `
@@ -30,7 +23,7 @@ async function fetchHabitsForUser() {
             <div class="col-4"><h5 class="habit-name">${habit.habit_name}</h5></div>
             <div class="col-6 habit-progress-section">
               <div class="habit-progress-container">
-                <div class="habit-progressbar" style="width: 80%">80%</div>
+                <div class="habit-progressbar" style="width: ${percentage}%">${percentage}%</div>
               </div>
             </div>
             <div class="col-1">
@@ -40,7 +33,7 @@ async function fetchHabitsForUser() {
           <!-- Second row with goal and edit link -->
           <div class="row">
             <div class="col-8">
-              <p class="habit-goal">Goal: X units a day</p>
+              <p class="habit-goal">Goal: ${habit.frequency} units a day</p>
             </div>
             <div class="col-4 edit-link">
               <a href="">Edit<i class="ps-2 bi bi-pencil"></i></a>
