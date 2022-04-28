@@ -9,5 +9,5 @@ VALUES
 INSERT INTO users (username, email, password, habit_id)
 VALUES
 ('JohnDoe', 'johndoe@gmail.com', '$2y$10$nrcLfGLJ2ZcwhsAu/qrUQOyoPmycazmiiJOkVATEprECVW/b1OlwC', 1),
-('JaneDoe', 'janedoe@gmail.com', 'jjdoe', 2),
-('DummyName', 'dummy@gmail.com', 'dummy', 3);
+('JaneDoe', 'janedoe@gmail.com', '$2y$10$Z17QToHQIJV8uCK3VH0pIu/MZgsZPmIUVyvXXAjMmng/w24qXcpH.', 2),
+('DummyName', 'dummy@gmail.com', '$2y$10$4fMJ4nxJ8L39sho2wAcfWONlgZO9icT4m7lZ7JnCX9mDVBCzrm0wK', 3);
