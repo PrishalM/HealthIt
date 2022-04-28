@@ -18,7 +18,7 @@ document.getElementById("sleep").addEventListener("click", function () {
   ("1px solid var(--darkest-green)");
   document.getElementById("recommendUnits").innerText =
     "We recommend at least 7 hours of sleep a day.";
-  habitChosen = "sleep";
+  habitChosen = "Sleep";
 });
 
 // Habit button 2 - Exercise
@@ -30,7 +30,7 @@ document.getElementById("exercise").addEventListener("click", function () {
   ("1px solid var(--darkest-green)");
   document.getElementById("recommendUnits").innerText =
     "We recommend at least 30 minutes of exercise a day.";
-  habitChosen = "exercise";
+  habitChosen = "Exercise";
 });
 
 // Habit button 3 - Water
@@ -42,7 +42,7 @@ document.getElementById("water").addEventListener("click", function () {
   ("1px solid var(--darkest-green)");
   document.getElementById("recommendUnits").innerText =
     "We recommend at least 2000 milliliters of water a day.";
-  habitChosen = "water";
+  habitChosen = "Water";
 });
 
 // Create new habit button *
@@ -57,7 +57,7 @@ document
 async function postHabit(e) {
   e.preventDefault();
   let frequency = document.getElementById("frequency").value;
-  console.log(habitChosen);
+
   try {
     const newHabit = {
       habit_name: habitChosen,
@@ -72,7 +72,11 @@ async function postHabit(e) {
 
     const response = await fetch("http://localhost:3000/habits", options);
     const { id, err } = await response.json();
-    console.log(id);
+    console.log(response.status);
+    if (response.status === 201) {
+      //Store the token
+      window.location.assign("dashboard.html");
+    }
   } catch (err) {
     console.warn(err);
   }
