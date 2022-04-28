@@ -62,7 +62,7 @@ class Habit {
         const { user_id, habit_name, frequency, frequency_count } = habitData;
 
         let result = await db.query(
-          `INSERT INTO habits (user_id, habit_name, frequency, frequency_count) VALUES($1, $2, $3, $4,) RETURNING *;`,
+          `INSERT INTO habits (user_id, habit_name, frequency, frequency_count) VALUES($1, $2, $3, $4) RETURNING * ;`,
           [user_id, habit_name, frequency, frequency_count]
         );
         let newHabit = new Habit(result.rows[0]);
