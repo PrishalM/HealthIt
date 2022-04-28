@@ -2,18 +2,18 @@
 // Dashboard
 
 // Fetch data for the user
-
 async function fetchDetailsForUser() {
-  let params = new URLSearchParams(document.location.search);
-  let id = params.get("id");
-  try {
-    const res = await fetch(`https://localhost:3000/users/${id}`);
-    const data = await response.json();
-    const { username } = data;
-    document.getElementById("dashboard-name").textContent = username;
-  } catch (err) {
-    console.warn(err);
-  }
+  let username = localStorage.getItem("username");
+  document.getElementById("dashboard-name").textContent = username;
+
+  // try {
+  //   const res = await fetch(`https://localhost:3000/users/${id}`);
+  //   const data = await response.json();
+  //   const { username } = data;
+
+  // } catch (err) {
+  //   console.warn(err);
+  // }
 }
 
 async function fetchHabitsForUser() {

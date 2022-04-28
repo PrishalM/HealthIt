@@ -34,6 +34,9 @@ async function login(e) {
         throw new Error("Login not authorised!");
       }
       localStorage.setItem("token", data.token);
+      localStorage.setItem("username", data.username);
+      localStorage.setItem("id", data.id);
+
       window.location.assign("dashboard.html");
     } catch (err) {
       console.warn(err);
