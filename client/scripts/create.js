@@ -69,6 +69,7 @@ async function postHabit(e) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newHabit),
     };
+    console.log(JSON.stringify(newHabit));
 
     const response = await fetch("http://localhost:3000/habits", options);
     const { id, err } = await response.json();
