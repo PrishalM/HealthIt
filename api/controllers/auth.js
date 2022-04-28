@@ -22,13 +22,17 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findByEmail(req.body.email);
-
+    console.log(user.user_id);
     if (!user) {
       throw new Error("No user with this email");
     }
     const authed = bcrypt.compare(req.body.password, user.password);
     if (!!authed) {
-      const payload = { username: user.username, email: user.email };
+      const payload = {
+        username: user.username,
+        email: user.email,
+        id: user.user_id,
+      };
       const sendToken = (err, token) => {
         if (err) {
           throw new Error("Error in token generation");
@@ -37,6 +41,7 @@ router.post("/login", async (req, res) => {
           success: true,
           token: "Bearer " + token,
           username: user.username,
+          id: user.user_id,
         });
       };
       console.log(payload, process.env.SECRET);

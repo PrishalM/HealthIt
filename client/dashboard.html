@@ -14,8 +14,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Dashboard - HealthIt</title>
-    <script defer src="scripts/dashboard.js"></script>
     <script defer src="jwt-decode.js"></script>
+    <script defer src="scripts/dashboard.js"></script>
   </head>
 
   <body onload="fetchDetailsForUser(), fetchHabitsForUser()" class="bashboard-body">
@@ -73,7 +73,7 @@
           <div class="col-2 user-image">Image<img src="" alt="" /></div>
           <div class="col-8">
             <h4 id="welcome">Welcome</h4>
-            <h3 id="dashboard-name">fullName</h3>
+            <h3 id="dashboard-name"></h3>
           </div>
           <div class="col-2">
             <div id="settingsBtn"><i class="bi bi-gear"></i></div>
