@@ -60,6 +60,7 @@ async function postHabit(e) {
 
   try {
     const newHabit = {
+      user_id: localStorage.getItem("id"),
       habit_name: habitChosen,
       frequency: frequency,
     };
