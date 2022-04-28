@@ -85,16 +85,24 @@ document.getElementById("CHbutton").addEventListener("click", function () {
 
 // View more details button/link
 // Need to fetch for the specific id as this will open up the modal only without data
-document.getElementById("viewMoreBtn").addEventListener("click", function () {
-  alert("more details btn");
-});
+// document.getElementById("viewMoreBtn").addEventListener("click", function () {
+//   alert("more details btn");
+// });
 
 // Edit habit button/link
 // Need to fetch for the specific id as this will open up the modal only without data
-document.getElementById("edit-link").addEventListener("click", function () {
-  alert("edit btnm");
-});
+// document.getElementById("edit-link").addEventListener("click", function () {
+//   alert("edit btnm");
+// });
 
-// Not created yet but need one for the close button on expanded habit and another for the log out link
-document.getElementById("SIbutton").addEventListener("click", FUNCTION);
-document.getElementById("SIbutton").addEventListener("click", FUNCTION);
+// close button on settings overlay
+document
+  .getElementById("settingsCloseBtn")
+  .addEventListener("click", function () {
+    document.getElementById("SettingContainers").classList.add("hide");
+  });
+
+// Log out button on settings overlay
+document.getElementById("logOutBtn").addEventListener("click", function () {
+  window.location.assign("index.html");
+});
