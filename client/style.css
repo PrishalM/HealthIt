@@ -129,6 +129,15 @@ footer a {
   background-color: var(--light-green);
 }
 
+#image-container {
+  display: flex;
+  justify-content: center;
+}
+#index-image {
+  width: 400px;
+  border-radius: 25px;
+}
+
 .createpage-body {
   background-color: var(--green);
 }
@@ -213,13 +222,22 @@ button {
   border-radius: 25px;
 }
 
-#welcome {
+.user-image i {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  color: var(--darkest-green);
+}
+
+#welcome,
+#settings {
   color: var(--green);
   font-size: 20px;
   font-weight: 700;
 }
 
-#dashboard-name {
+#dashboard-name,
+#dashboard-setting-name {
   color: var(--darkest-green);
   font-size: 32px;
   font-weight: 700;
@@ -282,7 +300,6 @@ h2 {
 .habit-progress-container {
   width: 50px;
   height: 22.5px;
-  /* position: relative; */
   background-color: var(--green);
   margin-bottom: 5px;
   -webkit-appearance: none;
@@ -294,7 +311,6 @@ h2 {
   background-color: var(--darkest-green);
   color: var(--white);
   height: 100%;
-  /* position: relative; */
   line-height: inherit;
   -webkit-appearance: none;
   appearance: none;
@@ -339,6 +355,11 @@ h2 {
 
 #HabitUnitInput {
   width: 120px;
+}
+
+.btn {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 @media screen and (max-width: 1400px) {

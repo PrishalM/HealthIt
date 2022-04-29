@@ -55,7 +55,7 @@ describe("habit controller", () => {
         frequency_count: 2,
       };
       jest
-        .spyOn(Habit, "HabitsByUserId")
+        .spyOn(Habit, "habitsByUserId")
         .mockResolvedValue(new Habit(testHabit));
 
       const mockReq = { params: { id: 1 } };

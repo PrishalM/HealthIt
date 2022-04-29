@@ -30,7 +30,7 @@ describe("Habit", () => {
     test("it resolves with habits on successful db query", async () => {
       let habitData = { id: 1, name: "Test Habit" };
       jest.spyOn(db, "query").mockResolvedValueOnce({ rows: [habitData] });
-      const result = await Habit.HabitsByUserId(1);
+      const result = await Habit.habitsByUserId(1);
       expect(result).toBeInstanceOf(Array);
       expect(result[0]).toBeInstanceOf(Habit);
     });

@@ -10,11 +10,12 @@ async function fetchDetailsForUser() {
 
 async function fetchHabitsForUser() {
   try {
-    const res = await fetch(
+    const res = fetch(
       `https://localhost:3000/habits/user/${localStorage.getItem("id")}`
     )
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         let percentage = habit.frequency_count / habit.frequency;
         let output = ``;
         data.forEach(function (habit) {
@@ -60,8 +61,8 @@ async function fetchHabitsForUser() {
           </div>
         </div>
                       `;
+          document.getElementById("habit-output").innerHTML = output + `<br>`;
         });
-        document.getElementById("habit-output").innerHTML = output + `<br>`;
       });
   } catch (err) {
     console.log(`ERROR: ${err}`);
