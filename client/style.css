@@ -133,9 +133,15 @@ footer a {
   display: flex;
   justify-content: center;
 }
+
 #index-image {
   width: 400px;
   border-radius: 25px;
+}
+
+.setting-text {
+  display: flex;
+  align-items: center;
 }
 
 .createpage-body {
