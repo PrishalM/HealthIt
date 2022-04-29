@@ -14,8 +14,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Dashboard - HealthIt</title>
+    <link rel="icon" href="images/HealthIt.png">
     <script defer src="jwt-decode.js"></script>
     <script defer src="scripts/dashboard.js"></script>
+    <script defer src="https://kit.fontawesome.com/08011ee24d.js" crossorigin="anonymous"></script>
   </head>
 
   <body onload="fetchDetailsForUser(), fetchHabitsForUser()" class="bashboard-body">
@@ -30,31 +32,31 @@
        <!-- Container for Settings Section -->
     <div id="SettingContainers" class="container-fluid hide">
 
-      <div class="row">
-          <div class="col-sm-11 p-3">
-              <h5>Settings</h5>
-          </div>
-          <div class="col-sm-1">
-              <button type="button" id="settingsCloseBtn" class="btn-close" aria-label="Close"></button>
-          </div>
-      </div>
+      
 
       <!-- Top Row  -->
       <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
-              <button type="button" class="btn btn-success" ></button>
-              <h2 style="display: inline-block;" id="dashboard-setting-name">fullName</h1>
+          <div class="col-2"></div>
+          <div class="col-8">
+            <div class="row">
+              <button type="button" class="btn btn-success" >
+                <div class="user-image"><i class="bi bi-person-fill"></i></div>
+              </button>
+              
+              <h4 id="settings">Settings</h4>
+              <h3 id="dashboard-setting-name">fullName</h3></div>
           </div>
-          <div class="col-sm-2"></div>
+          <div class="col-2">
+            <button type="button" id="settingsCloseBtn" class="btn-close" aria-label="Close"></button>
+          </div>
       </div>
 
       <!-- Bottom Row -->
       <div class="row">
           <div class="col-sm-4"></div>
           <div class="col-sm-4">
-              <ul>
-                  <li><i class="fa-solid fa-user"></i><span> Account Settings</span></li>
+          <ul>
+                  <li><span><i class="fa-solid fa-user"></i> Account Settings</span></li>
                   <li><i class="fa-solid fa-circle-question"></i><span> Help and support</span></li>
                   <li><i class="fa-solid fa-bell"></i></i><span> Notification settings</span></li>
                   <li><i class="fa-solid fa-lock"></i><span> Privacy settings</span></li>
@@ -70,7 +72,7 @@
       <div class="dashboard-container">
         <!-- Top row with image, name and setting button -->
         <div class="row">
-          <div class="col-2 user-image">Image<img src="" alt="" /></div>
+          <div class="col-2 user-image"><i class="bi bi-person-fill"></i></div>
           <div class="col-8">
             <h4 id="welcome">Welcome</h4>
             <h3 id="dashboard-name"></h3>
@@ -90,10 +92,10 @@
           <div class="habit">
             <!-- First row with name, progress bar and more details icon -->
             <div class="row">
-              <div class="col-4"><h5 class="habit-name">Habit1</h5></div>
+              <div class="col-4"><h5 class="habit-name">Water</h5></div>
               <div class="col-6 habit-progress-section">
                 <div class="habit-progress-container">
-                  <div class="habit-progressbar" style="width: 80%">80%</div>
+                  <div class="habit-progressbar" style="width: 50%">50%</div>
                 </div>
               </div>
               <div class="col-1">
@@ -103,14 +105,14 @@
             <!-- Second row with goal and edit link -->
             <div class="row">
               <div class="col-8">
-                <p class="habit-goal">Goal: X units a day</p>
+                <p class="habit-goal">Goal: 2000 millilitres a day</p>
               </div>
               <div class="col-4 edit-link">
                 <a href="">Edit<i class="ps-2 bi bi-pencil"></i></a>
               </div>
             </div>
             <!-- Third row with log units header -->
-            <div class="row"><h6 class="habit-log-unit">Log unit</h6></div>
+            <div class="row"><h6 class="habit-log-unit">Log millilitres</h6></div>
             <!-- fourth row with update progress field & button  -->
             <div class="row justify-content-between">
               <div class="col-5 habit-input-log">
