@@ -24,7 +24,6 @@ Released 22/04/2022 14:00, Sumbitted 29/04/2022 [15:00]
 - To start server, run bash _scripts/startDev.sh
 - To start testing, run bash _scripts/startTest.sh
 - To visit client-side, visit http://localhost:8080 or http://healthit.netlify.com
-- 
 
 ## Usage
 
@@ -47,7 +46,6 @@ Released 22/04/2022 14:00, Sumbitted 29/04/2022 [15:00]
 - PostgreSQL
 - Bcrypt
 - JSON Web Token
-- 
 
 ---
 
@@ -86,38 +84,38 @@ Organising and planning
 
 ## Wins
 
--Creating Users and storing their data in our database with hashed passwords 
--Authentication - using JSON Web Token to authenticate users
--Creating habits,storing data persistently in our database
--Retrieving data from API endpoints
--Testing coverage for server-side above 70%
--Using PostgreSQL effectively
+- Creating Users and storing their data in our database with hashed passwords 
+- Authentication - using JSON Web Token to authenticate users
+- Creating habits,storing data persistently in our database
+- Retrieving data from API endpoints
+- Testing coverage for server-side above 70%
+- Using PostgreSQL effectively
+
 
 ## Challenges
 
--JSON Web Token authentication
-  -Storing token data locally
-  -
- -Storing user account details
- -Problems with Docker setup
- 
- 
+- JSON Web Token authentication 
+    - Storing token data locally
+- Storing user account details
+- Problems with Docker setup
+
+
 
 ---
 
 # Bugs (that still exist)
 
-[ ] Unable to display habit data on front-end
-[ ] Edit/delete habit queries not connected to the front-end
-[ ] Not completely mobile responsive
+- [ ] Unable to display habit data on front-end
+- [ ]  Edit/delete habit queries not connected to the front-end
+- [ ]  Not completely mobile responsive
 
 ---
 
 # Future features
 
--Users will be able to create their own custom habit
--Users will be able to specify additional properties (e.g. exercise intensity, bedtime) to their habits
--Encourage community interaction (e.g. implement messsageboard/forum for users)
+- Users will be able to create their own custom habit 
+- Users will be able to specify additional properties (e.g. exercise intensity, bedtime) to their habits
+- Encourage community interaction (e.g. implement messsageboard/forum for users)
 
 ---
 
